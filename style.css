@@ -1,30 +1,54 @@
+/* =========================
+   RESET
+========================= */
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
-/* Contacts Section */
 
-.header-container{
+body {
+    width: 100%;
+    overflow-x: hidden;
+}
+
+
+/* =========================
+   HEADER CONTAINER
+========================= */
+
+.header-container {
     width: 100%;
     display: flex;
     flex-direction: column;
-    gap: 0px;
     position: fixed;
-    z-index: 1;
+    top: 0;
+    left: 0;
+    z-index: 1000;
 }
-.contacts{
+
+
+/* =========================
+   CONTACTS SECTION
+========================= */
+
+.contacts {
     width: 100%;
     padding: 10px;
     background-color: #680909;
     color: #b1a4a4;
-    gap: 30px;
+
     display: flex;
     justify-content: center;
+    align-items: center;
+
+    gap: 30px;
+
     font-family: Arial, Helvetica, sans-serif;
 }
 
-.contacts:hover{
+.contacts:hover {
     background-color: #8f2b03;
     color: #fdfdfd;
     transition: all 0.3s ease;
@@ -34,147 +58,477 @@
     font-size: 20px;
 }
 
-/* top navigation */
-.header{
+
+/* =========================
+   TOP NAVIGATION
+========================= */
+
+.header {
     width: 100%;
     padding: 20px;
-    border-bottom: 3px solid #000000;
+
+    background-color: #ffffff85;
+
+    border-bottom: 3px solid #000;
+
     display: flex;
     align-items: center;
     justify-content: space-between;
-    gap: 60px;
-}
 
-.header .logo img{
-    width: 130px;
-    cursor: pointer;
-}
-
-.header .nav ul{
-    display: flex;
     gap: 30px;
 }
 
-.nav ul li{
+.header .logo img {
+    width: 130px;
+    max-width: 100%;
+    cursor: pointer;
+}
+
+
+/* =========================
+   NAVIGATION
+========================= */
+
+.header .nav ul {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+
+.nav ul li {
     list-style: none;
 }
 
-.nav ul li a{
+.nav ul li a {
     text-decoration: none;
-    color: #000000;
+    color: #000;
+
     font-size: 18px;
     font-weight: 700;
+
     transition: all 0.3s ease;
+
     font-family: Arial, Helvetica, sans-serif;
 }
 
-.nav ul li a:hover{
+.nav ul li a:hover {
     color: #920404;
 }
 
-.nav ul li a.active{
+.nav ul li a.active {
     color: #fccf07;
 }
 
-.nav ul li a.active:hover{
+.nav ul li a.active:hover {
     color: #47520a;
 }
 
-.search-bar{
-   border-radius: 5px;
-   border: 2PX solid #000000;
-   background-color: #d3d0133f;
-   padding: 10px;
+
+/* =========================
+   SEARCH BAR
+========================= */
+
+.search-bar {
+    border-radius: 5px;
+    border: 2px solid #000;
+    background-color: #d3d0133f;
+
+    padding: 10px;
+
+    display: flex;
+    align-items: center;
 }
 
-.search-bar input{
+.search-bar input {
     border: none;
     outline: none;
     background-color: transparent;
+
     font-size: 16px;
-    color: #000000;
+    color: #000;
+
+    width: 150px;
 }
 
 .search-bar i {
-    right: 15px;
-    top: 50%;
+    font-size: 18px;
 }
 
-/* Banner Section */
+
+/* =========================
+   BANNER
+========================= */
 
 .flex-banner {
-  background: peachpuff;
-  width: 100%;
-  display: flex;
-  background-image: linear-gradient(to right, #f6d46594 0%, #fd9f858c 100%),url(./img/bghosi.jpg);
-  background-repeat: no-repeat;
-  background-size: cover;
+    background: peachpuff;
+
+    width: 100%;
+    min-height: 600px;
+
+    display: flex;
+    align-items: center;
+
+    background-image:
+        linear-gradient(
+            to right,
+            #f6d46594 0%,
+            #fd9f858c 100%
+        ),
+        url(./img/bghosi.jpg);
+
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
 }
 
-.flex-banner div {
-  flex: 1;
-  display: flex;
+.flex-banner > div {
+    flex: 1;
+}
+
+
+/* =========================
+   BANNER IMAGE
+========================= */
+
+.banner-image {
+    width: 35%;
+    height: 100%;
+
+    padding-top: 25px;
+
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+
+    -webkit-mask-image: linear-gradient(
+        to bottom,
+        black 55%,
+        rgba(0, 0, 0, 0.7) 70%,
+        transparent 100%
+    );
+
+    mask-image: linear-gradient(
+        to bottom,
+        black 55%,
+        rgba(0, 0, 0, 0.7) 70%,
+        transparent 100%
+    );
 }
 
 .flex-banner .banner-image img {
-height: 90%;
-
+    max-width: 100%;
+    height: 90%;
+    object-fit: contain;
 }
 
-.banner-image {
-  width: 25%;
-  height: 100%;
-  padding-top: 25px;
 
-  -webkit-mask-image: linear-gradient(
-        to bottom,
-        black 55%,
-        rgba(0,0,0,0.7) 70%,
-        transparent 100%
-)
-}
-
+/* =========================
+   BANNER TEXT
+========================= */
 
 .banner-text {
-  width: 75%;
-  flex-direction: column;
-  justify-content: center;
+    width: 65%;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    margin-left: 0;
+    padding: 40px;
 }
 
 .banner-text h1 {
-  font-size: 4em;
-  color: #fff;
-  margin-bottom: 20px;
-  padding-left: 20px;
-  align-items: center;
-  font-family:'roboto', sans-serif;
-  font-weight: 700;
+    font-size: clamp(2.5rem, 5vw, 4em);
+
+    color: #fff;
+
+    margin-bottom: 20px;
+    padding-left: 0;
+
+    font-family: 'Roboto', sans-serif;
+    font-weight: 700;
 }
 
 .banner-text p {
-  margin-bottom: 20px;
-  padding-left: 20px;
-  font-family:'roboto', sans-serif;
-  font-weight: 400;
+    margin-bottom: 20px;
+    padding-left: 0;
+
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+
+    font-size: 18px;
 }
 
+
+/* =========================
+   BUTTON
+========================= */
+
 .btn {
-  padding: 20px 20px;
-  width: 200px;
-  border: 2px solid #fff;
-  color: #fff;
-  text-decoration: none;
-  border-radius: 5px;
-  margin-left: 20px;
-  font-size: 1.2em;
-  transition: background-color 0.3s ease;
-  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-  font-weight: 700;
-  text-align: center;
+    padding: 15px 20px;
+
+    width: 200px;
+
+    border: 2px solid #fff;
+
+    color: #fff;
+
+    text-decoration: none;
+
+    border-radius: 5px;
+
+    margin-left: 0;
+
+    font-size: 1.2em;
+
+    transition: background-color 0.3s ease;
+
+    font-family:
+        'Franklin Gothic Medium',
+        'Arial Narrow',
+        Arial,
+        sans-serif;
+
+    font-weight: 700;
+
+    text-align: center;
 }
 
 .btn:hover {
-  background-color: #fff;
-  color: #000;
-  border: 2px solid #000;
+    background-color: #fff;
+    color: #000;
+
+    border: 2px solid #000;
+}
+
+
+/* ==================================================
+   TABLETS
+================================================== */
+
+@media (max-width: 992px) {
+
+    .header {
+        gap: 20px;
+        padding: 15px;
+    }
+
+    .header .logo img {
+        width: 110px;
+    }
+
+    .header .nav ul {
+        gap: 15px;
+    }
+
+    .nav ul li a {
+        font-size: 16px;
+    }
+
+    .search-bar input {
+        width: 100px;
+    }
+
+    .flex-banner {
+        min-height: 500px;
+    }
+
+    .banner-image {
+        width: 40%;
+    }
+
+    .banner-text {
+        width: 60%;
+        padding: 30px;
+    }
+
+    .banner-text h1 {
+        font-size: 3rem;
+    }
+}
+
+
+/* ==================================================
+   MOBILE
+================================================== */
+
+@media (max-width: 768px) {
+
+    /* CONTACTS */
+
+    .contacts {
+        gap: 15px;
+        padding: 8px;
+        font-size: 13px;
+    }
+
+    .contacts i {
+        font-size: 16px;
+    }
+
+
+    /* HEADER */
+
+    .header {
+        padding: 12px 15px;
+
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+
+    .header .logo img {
+        width: 100px;
+    }
+
+
+    /* NAVIGATION */
+
+    .header .nav {
+        width: 100%;
+        order: 3;
+    }
+
+    .header .nav ul {
+        width: 100%;
+
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+
+        gap: 15px;
+    }
+
+    .nav ul li a {
+        font-size: 14px;
+    }
+
+
+    /* SEARCH */
+
+    .search-bar {
+        padding: 7px;
+    }
+
+    .search-bar input {
+        width: 100px;
+        font-size: 14px;
+    }
+
+
+    /* BANNER */
+
+    .flex-banner {
+        min-height: auto;
+
+        flex-direction: column;
+
+        padding-top: 20px;
+    }
+
+
+    /* IMAGE */
+
+    .banner-image {
+        width: 100%;
+        height: 350px;
+        padding-top: 20px;
+        order: 1;
+    }
+
+    .flex-banner .banner-image img {
+        width: auto;
+        max-width: 90%;
+        height: 100%;
+    }
+
+
+    /* TEXT */
+
+    .banner-text {
+        width: 100%;
+
+        order: 2;
+
+        padding: 30px 20px 50px;
+
+        text-align: center;
+
+        align-items: center;
+    }
+
+    .banner-text h1 {
+        font-size: 2.3rem;
+    }
+
+    .banner-text p {
+        font-size: 16px;
+    }
+
+    .btn {
+        margin: 0 auto;
+    }
+}
+
+
+/* ==================================================
+   SMALL PHONES
+================================================== */
+
+@media (max-width: 480px) {
+
+    .contacts {
+        gap: 10px;
+        font-size: 11px;
+    }
+
+    .contacts i {
+        font-size: 14px;
+    }
+
+    .header {
+        padding: 10px;
+    }
+
+    .header .logo img {
+        width: 85px;
+    }
+
+    .search-bar {
+        padding: 6px;
+    }
+
+    .search-bar input {
+        width: 80px;
+        font-size: 13px;
+    }
+
+    .header .nav ul {
+        gap: 10px;
+    }
+
+    .nav ul li a {
+        font-size: 13px;
+    }
+
+    .banner-image {
+        height: 280px;
+    }
+
+    .banner-text {
+        padding: 25px 15px 40px;
+    }
+
+    .banner-text h1 {
+        font-size: 1.9rem;
+    }
+
+    .banner-text p {
+        font-size: 15px;
+    }
+
+    .btn {
+        width: 170px;
+        font-size: 1rem;
+        padding: 13px 15px;
+    }
 }
