@@ -4,6 +4,15 @@
     box-sizing: border-box;
 }
 /* Contacts Section */
+
+.header-container{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 0px;
+    position: fixed;
+    z-index: 1;
+}
 .contacts{
     width: 100%;
     padding: 10px;
@@ -89,4 +98,83 @@
 .search-bar i {
     right: 15px;
     top: 50%;
+}
+
+/* Banner Section */
+
+.flex-banner {
+  background: peachpuff;
+  width: 100%;
+  display: flex;
+  background-image: linear-gradient(to right, #f6d46594 0%, #fd9f858c 100%),url(./img/bghosi.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.flex-banner div {
+  flex: 1;
+  display: flex;
+}
+
+.flex-banner .banner-image img {
+height: 90%;
+
+}
+
+.banner-image {
+  width: 25%;
+  height: 100%;
+  padding-top: 25px;
+
+  -webkit-mask-image: linear-gradient(
+        to bottom,
+        black 55%,
+        rgba(0,0,0,0.7) 70%,
+        transparent 100%
+)
+}
+
+
+.banner-text {
+  width: 75%;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.banner-text h1 {
+  font-size: 4em;
+  color: #fff;
+  margin-bottom: 20px;
+  padding-left: 20px;
+  align-items: center;
+  font-family:'roboto', sans-serif;
+  font-weight: 700;
+}
+
+.banner-text p {
+  margin-bottom: 20px;
+  padding-left: 20px;
+  font-family:'roboto', sans-serif;
+  font-weight: 400;
+}
+
+.btn {
+  padding: 20px 20px;
+  width: 200px;
+  border: 2px solid #fff;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 5px;
+  margin-left: 20px;
+  font-size: 1.2em;
+  transition: background-color 0.3s ease;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  font-weight: 700;
+  text-align: center;
+}
+
+.btn:hover {
+  background-color: #fff;
+  color: #000;
+  border: 2px solid #000;
 }
