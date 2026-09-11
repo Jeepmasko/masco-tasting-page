@@ -239,7 +239,7 @@ body {
 
 .banner-text h1 {
     font-size: clamp(2.5rem, 5vw, 4em);
-
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
     color: #fff;
 
     margin-bottom: 20px;
