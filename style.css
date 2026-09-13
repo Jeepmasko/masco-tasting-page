@@ -530,27 +530,25 @@ body {
 }
 
 .services {
-    width: 99%;
+    width: 98%;
     min-height: 400px;
     margin: 10px;
     margin-top: -90px;
     display: flex;
-    background: linear-gradient(135deg, #36cde775,#1c3c57),url(./img/bga.png);
+    background: linear-gradient(135deg, #36cde775,#1c3c57),url(./img/madawa.png);
     border: 6px solid #fdfcfd;
     border-radius: 25px;
     padding: 10px;
     background-repeat: no-repeat;
+    background-size: cover;
     gap: 10px;
     box-shadow: 0 10px 25px rgba(0, 0, 0, 0.4);
     justify-content: center;
-    
-
 }
 
 
 .right-child {
     width: 30%;
-    height: 380px;
     border-right: 4px solid #fdfcfd;
 box-shadow: 4px 0 10px rgba(22, 13, 13, 0.25);
 }
@@ -573,11 +571,75 @@ box-shadow: 4px 0 10px rgba(22, 13, 13, 0.25);
 
 .middle {
     width: 40%;
-    height: 380px;
     border-right: 6px solid #fdfcfd;
 }
 
 .left-mother {
     width: 30%;
-    height: 380px;
+}
+
+/* Main form container */
+.doctor-form {
+    width: 500px;
+    margin: 50px auto;
+    padding: 30px;
+    border: 2px solid #ccc;
+    border-radius: 10px;
+    background-color: #ffffff;
+}
+
+/* Heading */
+.doctor-form h1 {
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+/* Labels */
+.doctor-form label {
+    display: block;
+    margin-top: 15px;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+/* Input fields and textarea */
+.doctor-form input,
+.doctor-form textarea {
+    width: 100%;
+    padding: 12px;
+    box-sizing: border-box;
+    border: 1px solid #aaa;
+    border-radius: 5px;
+    outline: none;
+}
+
+/* When clicking inside a field */
+.doctor-form input:focus,
+.doctor-form textarea:focus {
+    border: 2px solid #2d39e0;
+}
+
+/* Submit button */
+.doctor-form button {
+    width: 100%;
+    padding: 12px;
+    margin-top: 20px;
+    border: none;
+    border-radius: 5px;
+    background-color: #2d39e0;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+/* Button hover */
+.doctor-form button:hover {
+    background-color: #1d25a8;
+}
+
+/* Message */
+.doctor-form p {
+    text-align: center;
+    margin-top: 20px;
+    color: #555;
 }
