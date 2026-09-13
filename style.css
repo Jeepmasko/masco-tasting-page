@@ -522,6 +522,11 @@ body {
         font-size: 15px;
     }
 
+    .banner-buttons{
+        margin-top: 20px;
+        display: flex;
+        gap: 20px;
+    }
     .btn {
         width: 170px;
         font-size: 1rem;
@@ -642,4 +647,65 @@ box-shadow: 4px 0 10px rgba(22, 13, 13, 0.25);
     text-align: center;
     margin-top: 20px;
     color: #555;
+}
+
+
+.hospital-form {
+    width: 500px;
+    margin: 40px auto;
+    padding: 30px;
+    border: 2px solid #ddd;
+    border-radius: 12px;
+    background-color: white;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.hospital-form h1 {
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+.hospital-form label {
+    display: block;
+    margin-top: 15px;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.hospital-form input,
+.hospital-form textarea {
+    width: 100%;
+    padding: 12px;
+    box-sizing: border-box;
+    border: 1px solid #aaa;
+    border-radius: 6px;
+    outline: none;
+}
+
+.hospital-form input:focus,
+.hospital-form textarea:focus {
+    border: 2px solid #2d39e0;
+}
+
+.hospital-form button {
+    width: 100%;
+    padding: 13px;
+    margin-top: 20px;
+    border: none;
+    border-radius: 6px;
+    background-color: #2d39e0;
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.hospital-form button:hover {
+    background-color: #1d25a8;
+}
+
+.hospital-form p {
+    text-align: center;
+    color: #555;
+    margin-top: 20px;
 }
