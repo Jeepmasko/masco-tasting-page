@@ -1002,3 +1002,360 @@ body {
         font-size: 14px;
     }
 }
+
+* {
+    box-sizing: border-box;
+}
+
+
+/* =========================================
+   STAFF SECTION
+========================================= */
+
+.staff-section {
+    width: 100%;
+    max-width: 90%;
+
+    margin: 60px auto;
+    padding: 30px;
+
+    background: rgba(255, 255, 255, 0.30);
+
+    backdrop-filter: blur(18px);
+    -webkit-backdrop-filter: blur(18px);
+
+    border: 4px solid rgba(0, 0, 0, 0.65);
+
+    border-radius: 28px;
+
+    box-shadow:
+        0 15px 45px rgba(0, 0, 0, 0.20),
+        inset 0 0 25px rgba(255, 255, 255, 0.30);
+}
+
+
+/* =========================================
+   HEADER
+========================================= */
+
+.staff-header {
+    text-align: center;
+
+    margin-bottom: 30px;
+}
+
+
+.staff-header h2 {
+    margin: 0 0 8px;
+
+    color: #000000;
+
+    font-size: 38px;
+    font-weight: 800;
+
+    letter-spacing: 1px;
+}
+
+
+.staff-header p {
+    margin: 0;
+
+    color: #000000;
+
+    font-size: 16px;
+}
+
+
+/* =========================================
+   STAFF LIST
+========================================= */
+
+.staff-list {
+    width: 100%;
+
+    display: flex;
+    flex-direction: column;
+
+    gap: 15px;
+}
+
+
+/* =========================================
+   STAFF ROW
+========================================= */
+
+.staff-row {
+    width: 100%;
+
+    display: grid;
+
+    grid-template-columns: 1fr 1fr 2fr;
+
+    align-items: center;
+
+    gap: 20px;
+
+    padding: 20px 25px;
+
+    background: rgba(255, 255, 255, 0.30);
+
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+
+    border: 2px solid rgba(0, 0, 0, 0.35);
+
+    border-left: 7px solid #000000;
+
+    border-radius: 15px;
+
+    transition: all 0.3s ease;
+}
+
+
+/* =========================================
+   STAFF HOVER
+========================================= */
+
+.staff-row:hover {
+    transform: translateX(8px);
+
+    background: rgba(255, 255, 255, 0.55);
+
+    border-left-width: 10px;
+
+    box-shadow:
+        0 8px 25px rgba(0, 0, 0, 0.15);
+}
+
+
+/* =========================================
+   NAME
+========================================= */
+
+.staff-name h3 {
+    margin: 0;
+
+    color: #000000;
+
+    font-size: 21px;
+
+    font-weight: 800;
+}
+
+
+/* =========================================
+   POSITION
+========================================= */
+
+.staff-position h4 {
+    margin: 0;
+
+    color: #000000;
+
+    font-size: 17px;
+
+    font-weight: 700;
+}
+
+
+/* =========================================
+   ABOUT
+========================================= */
+
+.staff-about p {
+    margin: 0;
+
+    color: #000000;
+
+    font-size: 15px;
+
+    line-height: 1.6;
+}
+
+
+/* =========================================
+   TABLET
+========================================= */
+
+@media (max-width: 900px) {
+
+    .staff-section {
+        width: 100%;
+        padding: 20px;
+    }
+
+    .staff-row {
+        grid-template-columns: 1fr 1fr;
+
+        gap: 15px;
+    }
+
+    .staff-about {
+        grid-column: 1 / -1;
+    }
+
+}
+
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 600px) {
+
+    .staff-section {
+        width: 100%;
+
+        padding: 15px;
+
+        margin: 40px auto;
+
+        border-radius: 20px;
+    }
+
+
+    .staff-header h2 {
+        font-size: 30px;
+    }
+
+
+    .staff-row {
+        display: flex;
+
+        flex-direction: column;
+
+        align-items: flex-start;
+
+        padding: 20px;
+    }
+
+
+    .staff-name,
+    .staff-position,
+    .staff-about {
+        width: 100%;
+    }
+
+
+    .staff-name h3 {
+        font-size: 20px;
+    }
+
+
+    .staff-position h4 {
+        font-size: 16px;
+    }
+
+
+    .staff-about p {
+        font-size: 14px;
+    }
+
+}
+
+
+
+
+.main-footer {
+width: 100%;
+box-sizing: border-box;
+padding: 55px 6% 0;
+background: #101820;
+color: #ffffff;
+font-family: Arial, sans-serif;
+}
+
+.footer-container {
+width: 100%;
+max-width: 1400px;
+margin: auto;
+display: flex;
+gap: 40px;
+}
+
+.footer-column {
+flex: 1;
+min-width: 0;
+}
+
+.footer-column:first-child {
+flex: 1.4;
+}
+
+.footer-logo {
+margin: 0 0 20px;
+font-size: 27px;
+font-weight: 800;
+letter-spacing: 2px;
+}
+
+.footer-logo span {
+color: #d4af37;
+}
+
+.footer-column h3 {
+margin: 0 0 25px;
+padding-bottom: 12px;
+font-size: 17px;
+position: relative;
+}
+
+.footer-column h3::after {
+content: "";
+position: absolute;
+left: 0;
+bottom: 0;
+width: 35px;
+height: 3px;
+background: #d4af37;
+border-radius: 10px;
+}
+
+.footer-column p {
+color: #aeb7c2;
+font-size: 14px;
+line-height: 1.8;
+}
+
+.footer-column a {
+color: #b9c1ca;
+text-decoration: none;
+font-size: 14px;
+transition: 0.3s;
+}
+
+.footer-column a:hover {
+color: #d4af37;
+}
+
+.footer-column > a {
+display: block;
+margin-bottom: 13px;
+}
+
+.footer-link {
+color: #d4af37 !important;
+font-weight: 600;
+}
+
+.location {
+display: flex;
+gap: 12px;
+align-items: flex-start;
+margin-bottom: 15px;
+}
+
+.location span {
+font-size: 22px;
+}
+
+.location strong {
+display: block;
+margin-bottom: 7px;
+font-size: 14px;
+}
+
+.location p {
+margin: 0;
+font-family: 'Courier New', Courier, monospace;
+}
