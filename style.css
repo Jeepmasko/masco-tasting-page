@@ -1372,3 +1372,20 @@ font-family: 'Courier New', Courier, monospace;
     font-family: Arial, Helvetica, sans-serif;
     padding-top: 4px;
 }
+
+.footer-bottom {
+    /* background-color: #000000; */
+    border: 2px solid white;
+    border-radius: 10px;
+    padding: 5px;
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.footer-bottom a {
+    font-family: 'Courier New', Courier, monospace;
+    color: rgb(29, 193, 214);
+    text-decoration: none;
+}
+
+
