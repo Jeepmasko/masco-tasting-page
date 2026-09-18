@@ -1,6 +1,6 @@
-/* =========================
+/* =====================================================
    RESET
-========================= */
+===================================================== */
 
 * {
     margin: 0;
@@ -8,1387 +8,1294 @@
     box-sizing: border-box;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 body {
-    width: 100%;
-    overflow-x: hidden;
+    font-family: Arial, Helvetica, sans-serif;
+    background: #f4f8fb;
+    color: #17212b;
+    line-height: 1.6;
+}
+
+img {
+    max-width: 100%;
+    display: block;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+button,
+input,
+textarea {
+    font: inherit;
 }
 
 
-/* =========================
-   HEADER CONTAINER
-========================= */
+/* =====================================================
+   HEADER
+===================================================== */
 
 .header-container {
     width: 100%;
+    background: #ffffff;
+}
+
+
+/* =====================================================
+   CONTACT BAR
+===================================================== */
+
+.contacts {
+    width: 100%;
+    min-height: 45px;
+
     display: flex;
-    flex-direction: column;
-    position: fixed;
-    top: 0;
-    left: 0;
+    align-items: center;
+    justify-content: center;
+
+    gap: 25px;
+    padding: 8px 30px;
+
+    background: #071d2f;
+    color: #ffffff;
+
+    font-size: 13px;
+    flex-wrap: wrap;
+}
+
+.contacts a,
+.contacts span {
+    display: flex;
+    align-items: center;
+    gap: 7px;
+}
+
+.contacts i {
+    color: #d5a928;
+}
+
+
+/* =====================================================
+   MAIN HEADER
+===================================================== */
+
+.header {
+    width: 100%;
+    min-height: 90px;
+
+    display: flex;
+    align-items: center;
+
+    padding: 10px 5%;
+    gap: 30px;
+
+    background: rgba(255, 255, 255, 0.96);
+
+    box-shadow:
+        0 3px 15px rgba(0, 0, 0, 0.08);
+
+    position: relative;
     z-index: 1000;
 }
 
 
-/* =========================
-   CONTACTS SECTION
-========================= */
+/* =====================================================
+   LOGO
+===================================================== */
 
-.contacts {
-    width: 100%;
-    padding: 10px;
-    background-color: #680909;
-    color: #b1a4a4;
+.logo {
+    flex: 0 0 auto;
+}
 
+.logo img {
+    width: 130px;
+    height: auto;
+}
+
+
+/* =====================================================
+   NAVIGATION
+===================================================== */
+
+.nav {
+    flex: 1;
+}
+
+.nav ul {
     display: flex;
     justify-content: center;
     align-items: center;
 
-    gap: 30px;
+    gap: 22px;
 
-    font-family: Arial, Helvetica, sans-serif;
-}
-
-.contacts:hover {
-    background-color: #8f2b03;
-    color: #fdfdfd;
-    transition: all 0.3s ease;
-}
-
-.contacts i {
-    font-size: 20px;
-}
-
-
-/* =========================
-   TOP NAVIGATION
-========================= */
-
-.header {
-    width: 100%;
-    padding: 20px;
-
-    background-color: #ffffff85;
-
-    border-bottom: 3px solid #000;
-
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-
-    gap: 30px;
-}
-
-.header .logo img {
-    width: 130px;
-    max-width: 100%;
-    cursor: pointer;
-}
-
-
-/* =========================
-   NAVIGATION
-========================= */
-
-.header .nav ul {
-    display: flex;
-    align-items: center;
-    gap: 30px;
-}
-
-.nav ul li {
     list-style: none;
 }
 
-.nav ul li a {
-    text-decoration: none;
-    color: #000;
+.nav a {
+    display: block;
 
-    font-size: 18px;
+    font-size: 14px;
     font-weight: 700;
 
-    transition: all 0.3s ease;
+    padding: 10px 5px;
 
-    font-family: Arial, Helvetica, sans-serif;
+    color: #102b40;
+
+    transition: 0.3s ease;
 }
 
-.nav ul li a:hover {
-    color: #920404;
-}
-
-.nav ul li a.active {
-    color: #fccf07;
-}
-
-.nav ul li a.active:hover {
-    color: #47520a;
+.nav a:hover,
+.nav a.active {
+    color: #c89b25;
 }
 
 
-/* =========================
-   SEARCH BAR
-========================= */
+/* =====================================================
+   SEARCH
+===================================================== */
 
 .search-bar {
-    border-radius: 5px;
-    border: 2px solid #000;
-    background-color: #d3d0133f;
-
-    padding: 10px;
-
     display: flex;
     align-items: center;
+
+    width: 190px;
+
+    border: 1px solid #d7dfe5;
+    border-radius: 30px;
+
+    overflow: hidden;
+
+    background: #ffffff;
 }
 
 .search-bar input {
-    border: none;
+    width: 100%;
+
+    border: 0;
     outline: none;
-    background-color: transparent;
 
-    font-size: 16px;
-    color: #000;
+    padding: 10px 12px;
 
-    width: 150px;
+    background: transparent;
 }
 
-.search-bar i {
-    font-size: 18px;
+.search-bar button {
+    border: 0;
+
+    padding: 10px 14px;
+
+    background: transparent;
+
+    cursor: pointer;
+
+    color: #102b40;
+}
+
+.search-bar button:hover {
+    color: #c89b25;
 }
 
 
-/* =========================
-   BANNER
-========================= */
+/* =====================================================
+   MOBILE MENU
+===================================================== */
+
+.menu-toggle {
+    display: none;
+
+    border: 0;
+    background: transparent;
+
+    font-size: 25px;
+
+    cursor: pointer;
+
+    color: #102b40;
+}
+
+
+/* =====================================================
+   HERO
+===================================================== */
 
 .flex-banner {
-    background: peachpuff;
-
     width: 100%;
-    height: 100%;
+    min-height: 520px;
 
     display: flex;
     align-items: center;
+    justify-content: center;
 
-    background-image:
+    background:
         linear-gradient(
-            to right,
-            #f6d46594 0%,
-            #fd9f858c 100%
-        ),
-        url(./img/bghosi.jpg);
+            135deg,
+            #071d2f,
+            #0b3855
+        );
 
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
+    overflow: hidden;
 }
-
-.flex-banner > div {
-    flex: 1;
-}
-
-
-/* =========================
-   BANNER IMAGE
-========================= */
 
 .banner-image {
-    width: 35%;
-    height: 100%;
-
-    padding-top: 25px;
+    width: 45%;
 
     display: flex;
     justify-content: center;
     align-items: flex-end;
-
-    -webkit-mask-image: linear-gradient(
-        to bottom,
-        black 55%,
-        rgba(0, 0, 0, 0.7) 70%,
-        transparent 100%
-    );
-
-    mask-image: linear-gradient(
-        to bottom,
-        black 55%,
-        rgba(0, 0, 0, 0.7) 70%,
-        transparent 100%
-    );
 }
 
-.flex-banner .banner-image img {
-    max-width: 300%;
-    height: 100%;
+.banner-image img {
+       mask-image: linear-gradient(
+        to bottom,
+        black 40%,
+        transparent 100%
+    );
+
     object-fit: contain;
 }
 
-
-/* =========================
-   BANNER TEXT
-========================= */
-
 .banner-text {
-    width: 65%;
+    width: 55%;
 
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
+    padding: 60px 7% 60px 20px;
 
-    margin-left: 0;
-    padding: 40px;
+    color: #ffffff;
 }
 
 .banner-text h1 {
-    font-size: clamp(2.5rem, 5vw, 4em);
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-    color: #fff;
+    font-size: clamp(32px, 4vw, 58px);
+
+    line-height: 1.1;
 
     margin-bottom: 20px;
-    padding-left: 0;
+}
 
-    font-family: 'Roboto', sans-serif;
-    font-weight: 700;
+.health {
+    color: #d5a928;
 }
 
 .banner-text p {
-    margin-bottom: 20px;
-    padding-left: 0;
-
-    font-family: 'Roboto', sans-serif;
-    font-weight: 400;
-
     font-size: 18px;
+
+    max-width: 650px;
+
+    margin-bottom: 30px;
+
+    color: #dbe7ef;
 }
 
 
-/* =========================
-   BUTTON
-========================= */
+/* =====================================================
+   HERO BUTTONS
+===================================================== */
+
+.banner-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
 
 .btn {
-    padding: 15px 20px;
+    display: inline-flex;
 
-    width: 200px;
+    align-items: center;
+    justify-content: center;
 
-    border: 2px solid #fff;
+    padding: 11px 17px;
 
-    color: #fff;
-
-    text-decoration: none;
+    border: 1px solid rgba(255, 255, 255, 0.4);
 
     border-radius: 5px;
 
-    margin-left: 0;
+    background: rgba(255, 255, 255, 0.08);
 
-    font-size: 1.2em;
+    color: #ffffff;
 
-    transition: background-color 0.3s ease;
-
-    font-family:
-        'Franklin Gothic Medium',
-        'Arial Narrow',
-        Arial,
-        sans-serif;
-
+    font-size: 12px;
     font-weight: 700;
 
-    text-align: center;
+    transition: 0.3s ease;
 }
 
 .btn:hover {
-    background-color: #72B1BC;
-    color: #000;
+    background: #d5a928;
 
-    border: 2px solid #000;
+    border-color: #d5a928;
+
+    color: #071d2f;
+
+    transform: translateY(-2px);
 }
 
 
-/* ==================================================
-   TABLETS
-================================================== */
+/* =====================================================
+   THREE FORMS
+===================================================== */
 
-@media (max-width: 992px) {
+.services {
+    width: 100%;
+
+    padding: 70px 5%;
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, minmax(0, 1fr));
+
+    gap: 25px;
+
+    background: #eef4f7;
+}
+
+.service-column {
+    min-width: 0;
+}
+
+
+/* =====================================================
+   FORM BOX
+===================================================== */
+
+.hospital-form,
+.doctor-form {
+    height: 100%;
+
+    padding: 30px;
+
+    background: rgba(255, 255, 255, 0.9);
+
+    border:
+        1px solid rgba(10, 50, 70, 0.08);
+
+    border-radius: 14px;
+
+    box-shadow:
+        0 10px 30px rgba(0, 0, 0, 0.07);
+
+    transition: 0.3s ease;
+}
+
+.hospital-form:hover,
+.doctor-form:hover {
+    transform: translateY(-5px);
+
+    box-shadow:
+        0 15px 35px rgba(0, 0, 0, 0.12);
+}
+
+.hospital-form h2,
+.doctor-form h2 {
+    color: #092b42;
+
+    font-size: 24px;
+
+    margin-bottom: 20px;
+}
+
+
+/* =====================================================
+   FORM ICON
+===================================================== */
+
+.form-icon {
+    width: 55px;
+    height: 55px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 50%;
+
+    background: #e9f3f8;
+
+    color: #0b567a;
+
+    font-size: 23px;
+
+    margin-bottom: 15px;
+}
+
+
+/* =====================================================
+   FORM
+===================================================== */
+
+.hospital-contact-form {
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 8px;
+}
+
+.hospital-contact-form label {
+    margin-top: 8px;
+
+    font-size: 13px;
+
+    font-weight: 700;
+
+    color: #30495b;
+}
+
+.hospital-contact-form input,
+.hospital-contact-form textarea {
+    width: 100%;
+
+    padding: 12px 14px;
+
+    border:
+        1px solid #d6e0e7;
+
+    border-radius: 7px;
+
+    outline: none;
+
+    background: #ffffff;
+
+    color: #17212b;
+
+    resize: vertical;
+
+    transition: 0.3s ease;
+}
+
+.hospital-contact-form input:focus,
+.hospital-contact-form textarea:focus {
+    border-color: #0b6c98;
+
+    box-shadow:
+        0 0 0 3px rgba(11, 108, 152, 0.1);
+}
+
+.hospital-contact-form button {
+    margin-top: 15px;
+
+    padding: 13px 18px;
+
+    border: 0;
+
+    border-radius: 7px;
+
+    background: #0a587c;
+
+    color: #ffffff;
+
+    font-weight: 700;
+
+    cursor: pointer;
+
+    transition: 0.3s ease;
+}
+
+.hospital-contact-form button:hover {
+    background: #d5a928;
+
+    color: #071d2f;
+}
+
+.hospital-contact-form button:disabled {
+    opacity: 0.7;
+    cursor: wait;
+}
+
+.form-message {
+    margin-top: 15px;
+
+    font-size: 13px;
+
+    color: #61727e;
+}
+
+
+/* =====================================================
+   PATIENT SERVICES
+===================================================== */
+
+.patient-services {
+    width: 100%;
+
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    gap: 40px;
+
+    padding: 80px 7%;
+
+    background: #ffffff;
+}
+
+.patient-content {
+    min-width: 0;
+}
+
+.patient-content > h2 {
+    font-size: 38px;
+
+    color: #092b42;
+
+    margin-bottom: 30px;
+}
+
+.patient-service-box {
+    padding: 25px;
+
+    margin-bottom: 20px;
+
+    border-radius: 12px;
+
+    background: #f4f8fb;
+
+    border-left:
+        5px solid #d5a928;
+}
+
+.service-title {
+    display: flex;
+
+    align-items: center;
+
+    gap: 12px;
+
+    margin-bottom: 12px;
+}
+
+.service-title i {
+    color: #0a587c;
+
+    font-size: 22px;
+}
+
+.patient-service-box h3 {
+    color: #092b42;
+}
+
+.patient-service-box p {
+    color: #5c6c76;
+
+    margin-bottom: 15px;
+}
+
+.patient-service-box ul {
+    padding-left: 20px;
+
+    color: #344b59;
+}
+
+.patient-service-box li {
+    margin-bottom: 5px;
+}
+
+.patient-image {
+    min-height: 500px;
+
+    overflow: hidden;
+
+    border-radius: 15px;
+}
+
+.patient-image img {
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+}
+
+
+/* =====================================================
+   INSURANCE
+===================================================== */
+
+.insurance-section {
+    width: 100%;
+
+    padding: 70px 7%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background:
+        linear-gradient(
+            135deg,
+            #edf4f7,
+            #ffffff
+        );
+}
+
+.insurance-content {
+    width: 100%;
+    max-width: 800px;
+
+    padding: 45px;
+
+    text-align: center;
+
+    background:
+        rgba(255, 255, 255, 0.85);
+
+    border:
+        1px solid rgba(10, 50, 70, 0.08);
+
+    border-radius: 15px;
+
+    box-shadow:
+        0 10px 30px rgba(0, 0, 0, 0.07);
+}
+
+.insurance-content h2 {
+    color: #092b42;
+
+    margin-bottom: 15px;
+}
+
+.insurance-content p {
+    color: #5c6c76;
+
+    margin-bottom: 12px;
+}
+
+.insurance-button {
+    margin-top: 15px;
+
+    background: #0a587c;
+}
+
+
+/* =====================================================
+   STAFF
+===================================================== */
+
+.staff-section {
+    width: 100%;
+
+    padding: 80px 7%;
+
+    background: #edf4f7;
+}
+
+.staff-header {
+    text-align: center;
+
+    margin-bottom: 45px;
+}
+
+.staff-header h2 {
+    font-size: 40px;
+
+    color: #092b42;
+
+    margin-bottom: 10px;
+}
+
+.staff-header p {
+    color: #61727e;
+}
+
+.staff-list {
+    width: 100%;
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 15px;
+}
+
+.staff-row {
+    display: grid;
+
+    grid-template-columns:
+        1fr 1fr 2fr;
+
+    gap: 20px;
+
+    align-items: center;
+
+    padding: 22px 25px;
+
+    background: #ffffff;
+
+    border-radius: 10px;
+
+    box-shadow:
+        0 5px 20px rgba(0, 0, 0, 0.05);
+
+    transition: 0.3s ease;
+}
+
+.staff-row:hover {
+    transform: translateX(5px);
+}
+
+.staff-name h3 {
+    color: #092b42;
+}
+
+.staff-position h4 {
+    color: #b18418;
+}
+
+.staff-about p {
+    color: #5e707c;
+}
+
+
+/* =====================================================
+   FOOTER
+===================================================== */
+
+.main-footer {
+    width: 100%;
+
+    background: #061b2c;
+
+    color: #ffffff;
+}
+
+.footer-container {
+    width: 100%;
+
+    display: grid;
+
+    grid-template-columns:
+        2fr 1fr 1.3fr 1.2fr 1.3fr;
+
+    gap: 35px;
+
+    padding: 65px 6%;
+}
+
+.footer-column {
+    min-width: 0;
+}
+
+.footer-column h3 {
+    margin-bottom: 20px;
+
+    color: #d5a928;
+}
+
+.footer-column > p {
+    color: #b9c9d3;
+
+    font-size: 14px;
+}
+
+.footer-column > a {
+    display: block;
+
+    margin-bottom: 9px;
+
+    color: #b9c9d3;
+
+    font-size: 14px;
+
+    transition: 0.3s ease;
+}
+
+.footer-column > a:hover {
+    color: #ffffff;
+}
+
+.footer-logo {
+    color: #ffffff;
+
+    margin-bottom: 15px;
+}
+
+.footer-logo span {
+    display: block;
+
+    color: #d5a928;
+}
+
+.footer-link {
+    display: inline-block;
+
+    margin-top: 15px;
+
+    color: #d5a928;
+
+    font-weight: 700;
+
+    font-size: 14px;
+}
+
+.footer-link:hover {
+    color: #ffffff;
+}
+
+
+/* =====================================================
+   LOCATION
+===================================================== */
+
+.location {
+    display: flex;
+
+    gap: 12px;
+
+    align-items: flex-start;
+}
+
+.location > i {
+    color: #d5a928;
+
+    margin-top: 5px;
+}
+
+.location strong {
+    color: #ffffff;
+}
+
+.location p {
+    margin-top: 5px;
+
+    color: #b9c9d3;
+
+    font-size: 13px;
+}
+
+
+/* =====================================================
+   SOCIAL
+===================================================== */
+
+.social-links {
+    display: flex;
+
+    flex-wrap: wrap;
+
+    gap: 10px;
+
+    margin-top: 20px;
+}
+
+.social-links a {
+    width: 38px;
+    height: 38px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 50%;
+
+    background:
+        rgba(255, 255, 255, 0.08);
+
+    color: #ffffff;
+
+    transition: 0.3s ease;
+}
+
+.social-links a:hover {
+    background: #d5a928;
+
+    color: #061b2c;
+}
+
+
+/* =====================================================
+   CONTACT
+===================================================== */
+
+.contact {
+    display: flex;
+
+    align-items: center;
+
+    gap: 12px;
+
+    margin-bottom: 14px;
+}
+
+.contact i {
+    color: #d5a928;
+}
+
+.contact p {
+    color: #b9c9d3;
+
+    font-size: 13px;
+}
+
+.contact-button {
+    display: inline-block;
+
+    margin-top: 10px;
+
+    padding: 10px 18px;
+
+    border:
+        1px solid #d5a928;
+
+    border-radius: 5px;
+
+    color: #d5a928;
+
+    font-size: 13px;
+
+    font-weight: 700;
+
+    transition: 0.3s ease;
+}
+
+.contact-button:hover {
+    background: #d5a928;
+
+    color: #061b2c;
+}
+
+
+/* =====================================================
+   FOOTER BOTTOM
+===================================================== */
+
+.footer-bottom {
+    width: 100%;
+
+    padding: 20px 6%;
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    gap: 20px;
+
+    border-top:
+        1px solid rgba(255, 255, 255, 0.1);
+
+    color: #9eafb9;
+
+    font-size: 13px;
+}
+
+.footer-bottom div {
+    display: flex;
+
+    gap: 20px;
+}
+
+.footer-bottom a:hover {
+    color: #ffffff;
+}
+
+
+/* =====================================================
+   LAST SECTION
+===================================================== */
+
+.mwisho {
+    width: 100%;
+
+    padding: 15px;
+
+    text-align: center;
+
+    background: #d5a928;
+
+    color: #061b2c;
+
+    font-weight: 800;
+
+    letter-spacing: 2px;
+
+    font-size: 13px;
+}
+
+
+/* =====================================================
+   TABLET
+===================================================== */
+
+@media (max-width: 1100px) {
 
     .header {
-        gap: 20px;
-        padding: 15px;
-    }
-
-    .header .logo img {
-        width: 110px;
-    }
-
-    .header .nav ul {
+        padding: 10px 3%;
         gap: 15px;
     }
 
-    .nav ul li a {
-        font-size: 16px;
+    .nav ul {
+        gap: 12px;
     }
 
-    .search-bar input {
-        width: 100px;
-    }
-
-    .flex-banner {
-        min-height: 500px;
-    }
-
-    .banner-image {
-        width: 40%;
-    }
-
-    .banner-text {
-        width: 60%;
-        padding: 30px;
-    }
-
-    .banner-text h1 {
-        font-size: 3rem;
-    }
-}
-
-
-/* ==================================================
-   MOBILE
-================================================== */
-
-@media (max-width: 768px) {
-
-    /* CONTACTS */
-
-    .contacts {
-        gap: 15px;
-        padding: 8px;
+    .nav a {
         font-size: 13px;
     }
 
-    .contacts i {
-        font-size: 16px;
+    .search-bar {
+        width: 150px;
     }
 
+    .services {
+        grid-template-columns: 1fr 1fr;
+    }
 
-    /* HEADER */
+    .service-column:last-child {
+        grid-column: 1 / -1;
+
+        max-width: 600px;
+
+        width: 100%;
+
+        justify-self: center;
+    }
+
+    .footer-container {
+        grid-template-columns:
+            repeat(3, 1fr);
+    }
+}
+
+
+/* =====================================================
+   MOBILE
+===================================================== */
+
+@media (max-width: 800px) {
+
+    .contacts {
+        justify-content: flex-start;
+
+        overflow-x: auto;
+
+        flex-wrap: nowrap;
+
+        padding: 8px 15px;
+
+        white-space: nowrap;
+    }
 
     .header {
-        padding: 12px 15px;
+        min-height: 75px;
 
-        flex-wrap: wrap;
+        padding: 8px 20px;
+
         justify-content: space-between;
     }
 
-    .header .logo img {
-        width: 100px;
+    .logo img {
+        width: 105px;
     }
 
+    .menu-toggle {
+        display: block;
 
-    /* NAVIGATION */
+        order: 2;
+    }
 
-    .header .nav {
+    .nav {
+        position: absolute;
+
+        top: 100%;
+        left: 0;
+
         width: 100%;
-        order: 3;
+
+        background: #ffffff;
+
+        display: none;
+
+        box-shadow:
+            0 10px 20px rgba(0, 0, 0, 0.1);
     }
 
-    .header .nav ul {
-        width: 100%;
-
-        display: flex;
-        justify-content: center;
-        flex-wrap: wrap;
-
-        gap: 15px;
+    .nav.active {
+        display: block;
     }
 
-    .nav ul li a {
-        font-size: 14px;
-    }
-
-
-    /* SEARCH */
-
-    .search-bar {
-        padding: 7px;
-    }
-
-    .search-bar input {
-        width: 100px;
-        font-size: 14px;
-    }
-
-
-    /* BANNER */
-
-    .flex-banner {
-        min-height: auto;
-
+    .nav ul {
         flex-direction: column;
 
-        padding-top: 20px;
+        align-items: stretch;
+
+        gap: 0;
     }
 
+    .nav li {
+        border-bottom:
+            1px solid #edf0f2;
+    }
 
-    /* IMAGE */
+    .nav a {
+        padding: 15px 25px;
+    }
+
+    .search-bar {
+        width: 150px;
+
+        order: 1;
+    }
+
+    .flex-banner {
+        flex-direction: column;
+
+        min-height: auto;
+    }
 
     .banner-image {
         width: 100%;
-        padding-top: 20px;
+
         order: 1;
-    } 
+    }
 
-  
-
-
-
-    /* TEXT */
+    .banner-image img {
+        width: min(400px, 90%);
+    }
 
     .banner-text {
         width: 100%;
 
         order: 2;
 
-        padding: 30px 20px 50px;
+        padding: 35px 7% 50px;
 
         text-align: center;
-
-        align-items: center;
     }
 
     .banner-text h1 {
-        font-size: 2.3rem;
+        font-size:
+            clamp(28px, 8vw, 42px);
     }
 
     .banner-text p {
         font-size: 16px;
     }
 
-    .btn {
-        margin: 0 auto;
-    }
-}
-
-
-/* ==================================================
-   SMALL PHONES
-================================================== */
-
-@media (max-width: 480px) {
-
-    .contacts {
-        gap: 10px;
-        font-size: 11px;
+    .banner-buttons {
+        justify-content: center;
     }
 
-    .contacts i {
-        font-size: 14px;
+    .services {
+        grid-template-columns: 1fr;
+
+        padding: 50px 5%;
     }
 
-    .header {
-        padding: 10px;
+    .service-column:last-child {
+        grid-column: auto;
+
+        max-width: none;
     }
-
-    .header .logo img {
-        width: 85px;
-    }
-
-    .search-bar {
-        padding: 6px;
-    }
-
-    .search-bar input {
-        width: 80px;
-        font-size: 13px;
-    }
-
-    .header .nav ul {
-        gap: 10px;
-    }
-
-    .nav ul li a {
-        font-size: 13px;
-    }
-
-    .banner-image {
-        height: 280px;
-    }
-
-    .banner-text {
-        padding: 25px 15px 40px;
-    }
-
-    .banner-text h1 {
-        font-size: 1.9rem;
-    }
-
-    .banner-text p {
-        font-size: 15px;
-    }
-
-    .banner-buttons{
-        margin-top: 20px;
-        display: flex;
-        gap: 20px;
-    }
-    .btn {
-        width: 170px;
-        font-size: 1rem;
-        padding: 13px 15px;
-    }
-}
-
-.services {
-    width: 98%;
-    min-height: 400px;
-    margin: 10px;
-    margin-top: -90px;
-    display: flex;
-    background: linear-gradient(135deg, #36cde775,#1c3c57),url(./img/madawa.png);
-    border: 6px solid #fdfcfd;
-    border-radius: 25px;
-    padding: 10px;
-    background-repeat: no-repeat;
-    background-size: cover;
-    gap: 10px;
-    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.4);
-    justify-content: center;
-}
-
-
-.right-child {
-    width: 30%;
-    border-right: 4px solid #fdfcfd;
-box-shadow: 4px 0 10px rgba(22, 13, 13, 0.25);
-}
-
-.right-child h2 {
-    text-align: center;
-    color: #fdfcfd;
-    font-family: 'Roboto', sans-serif;
-    font-size: 1.7em;
-    font-weight: 700;
-    margin: 10px; 
-}
-
-.right-child p {
-    text-align: center;
-    font-family: Arial, Helvetica, sans-serif;
-    
-}
-
-
-.middle {
-    width: 40%;
-    border-right: 6px solid #fdfcfd;
-}
-
-.left-mother {
-    width: 30%;
-}
-
-/* Main form container */
-.doctor-form {
-    width: 500px;
-    margin: 50px auto;
-    padding: 30px;
-    border: 2px solid #ccc;
-    border-radius: 10px;
-    background-color: #ffffff;
-}
-
-/* Heading */
-.doctor-form h1 {
-    text-align: center;
-    margin-bottom: 25px;
-}
-
-/* Labels */
-.doctor-form label {
-    display: block;
-    margin-top: 15px;
-    margin-bottom: 5px;
-    font-weight: bold;
-}
-
-/* Input fields and textarea */
-.doctor-form input,
-.doctor-form textarea {
-    width: 100%;
-    padding: 12px;
-    box-sizing: border-box;
-    border: 1px solid #aaa;
-    border-radius: 5px;
-    outline: none;
-}
-
-/* When clicking inside a field */
-.doctor-form input:focus,
-.doctor-form textarea:focus {
-    border: 2px solid #2d39e0;
-}
-
-/* Submit button */
-.doctor-form button {
-    width: 100%;
-    padding: 12px;
-    margin-top: 20px;
-    border: none;
-    border-radius: 5px;
-    background-color: #2d39e0;
-    color: white;
-    font-size: 16px;
-    cursor: pointer;
-}
-
-/* Button hover */
-.doctor-form button:hover {
-    background-color: #1d25a8;
-}
-
-/* Message */
-.doctor-form p {
-    text-align: center;
-    margin-top: 20px;
-    color: #555;
-}
-
-
-.hospital-form {
-    width: 500px;
-    margin: 40px auto;
-    padding: 30px;
-    border: 2px solid #ddd;
-    border-radius: 12px;
-    background-color: white;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-}
-
-.hospital-form h1 {
-    text-align: center;
-    margin-bottom: 25px;
-}
-
-.hospital-form label {
-    display: block;
-    margin-top: 15px;
-    margin-bottom: 5px;
-    font-weight: bold;
-}
-
-.hospital-form input,
-.hospital-form textarea {
-    width: 100%;
-    padding: 12px;
-    box-sizing: border-box;
-    border: 1px solid #aaa;
-    border-radius: 6px;
-    outline: none;
-}
-
-.hospital-form input:focus,
-.hospital-form textarea:focus {
-    border: 2px solid #2d39e0;
-}
-
-.hospital-form button {
-    width: 100%;
-    padding: 13px;
-    margin-top: 20px;
-    border: none;
-    border-radius: 6px;
-    background-color: #2d39e0;
-    color: white;
-    font-size: 16px;
-    font-weight: bold;
-    cursor: pointer;
-}
-
-.hospital-form button:hover {
-    background-color: #1d25a8;
-}
-
-.hospital-form p {
-    text-align: center;
-    color: #555;
-    margin-top: 20px;
-}
-
-/* =========================================
-   GLOBAL
-========================================= */
-
-* {
-    box-sizing: border-box;
-}
-
-body {
-    margin: 0;
-    padding: 0;
-}
-
-
-/* =========================================
-   PATIENT SERVICES
-========================================= */
-
-.patient-services {
-    width: 100%;
-    max-width: 98%;
-    min-height: 550px;
-
-    margin: 60px auto;
-    padding: 25px;
-
-    display: flex;
-    flex-direction: row;
-    gap: 30px;
-
-    background: rgba(255, 255, 255, 0.30);
-
-    backdrop-filter: blur(18px);
-    -webkit-backdrop-filter: blur(18px);
-
-    border: 4px solid rgba(0, 0, 0, 0.65);
-
-    border-radius: 28px;
-
-    box-shadow:
-        0 15px 45px rgba(0, 0, 0, 0.20),
-        inset 0 0 25px rgba(255, 255, 255, 0.30);
-
-    overflow: hidden;
-}
-
-
-/* =========================================
-   LEFT COLUMN
-========================================= */
-
-.patient-content {
-    flex: 1;
-    min-width: 0;
-
-    padding: 25px;
-
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-
-    background: rgba(255, 255, 255, 0.25);
-
-    border: 2px solid rgba(0, 0, 0, 0.35);
-
-    border-radius: 20px;
-}
-
-
-/* =========================================
-   TITLE
-========================================= */
-
-.patient-content h2 {
-    margin: 0 0 25px;
-
-    color: #000;
-
-    font-size: 36px;
-    font-weight: 800;
-
-    text-align: center;
-}
-
-
-/* =========================================
-   IN-PATIENT / OUT-PATIENT BOX
-========================================= */
-
-.patient-service-box {
-    margin-bottom: 18px;
-    padding: 20px;
-
-    background: rgba(255, 255, 255, 0.30);
-
-    backdrop-filter: blur(10px);
-
-    border: 2px solid rgba(0, 0, 0, 0.30);
-
-    border-left: 7px solid #000;
-
-    border-radius: 14px;
-
-    transition: 0.3s ease;
-}
-
-
-.patient-service-box:hover {
-    transform: translateX(8px);
-
-    background: rgba(255, 255, 255, 0.50);
-
-    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
-}
-
-
-/* =========================================
-   SERVICE TEXT
-========================================= */
-
-.patient-service-box h3 {
-    margin: 0 0 10px;
-
-    color: #000;
-
-    font-size: 24px;
-    font-weight: 800;
-}
-
-
-.patient-service-box p {
-    margin: 0 0 12px;
-
-    color: #000;
-
-    font-size: 15px;
-    line-height: 1.6;
-}
-
-
-.patient-service-box ul {
-    margin: 0;
-    padding-left: 20px;
-
-    color: #000;
-}
-
-
-.patient-service-box li {
-    margin-bottom: 6px;
-
-    color: #000;
-
-    font-size: 14px;
-}
-
-
-/* =========================================
-   RIGHT COLUMN — IMAGE
-========================================= */
-
-.patient-image {
-    flex: 1;
-    min-width: 0;
-    min-height: 500px;
-
-    padding: 10px;
-
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
-    background: rgba(255, 255, 255, 0.25);
-
-    border: 2px solid rgba(0, 0, 0, 0.35);
-
-    border-radius: 20px;
-
-    overflow: hidden;
-}
-
-
-.patient-image img {
-    width: 100%;
-    height: 100%;
-    min-height: 480px;
-
-    display: block;
-
-    object-fit: cover;
-
-    border: 3px solid #000;
-
-    border-radius: 15px;
-
-    transition: transform 0.5s ease;
-}
-
-
-.patient-image:hover img {
-    transform: scale(1.04);
-}
-
-
-/* =========================================
-   TABLET
-========================================= */
-
-@media (max-width: 900px) {
 
     .patient-services {
-        padding: 18px;
-        gap: 20px;
+        grid-template-columns: 1fr;
+
+        padding: 55px 5%;
     }
 
-    .patient-content {
-        padding: 18px;
-    }
-
-    .patient-content h2 {
-        font-size: 30px;
-    }
-
-    .patient-service-box h3 {
-        font-size: 21px;
-    }
-}
-
-
-/* =========================================
-   MOBILE
-========================================= */
-
-@media (max-width: 700px) {
-
-    .patient-services {
-        width: 100%;
-
-        flex-direction: column;
-
-        margin: 40px auto;
-
-        padding: 15px;
-    }
-
-    .patient-content {
-        width: 100%;
+    .patient-content > h2 {
+        font-size: 32px;
     }
 
     .patient-image {
-        width: 100%;
         min-height: 350px;
     }
 
-    .patient-image img {
-        min-height: 330px;
-    }
-}
-
-
-/* =========================================
-   SMALL PHONES
-========================================= */
-
-@media (max-width: 450px) {
-
-    .patient-services {
-        padding: 10px;
-        border-width: 3px;
-        border-radius: 20px;
+    .insurance-section {
+        padding: 55px 5%;
     }
 
-    .patient-content {
-        padding: 15px;
+    .insurance-content {
+        padding: 30px 20px;
     }
-
-    .patient-content h2 {
-        font-size: 26px;
-    }
-
-    .patient-service-box {
-        padding: 15px;
-    }
-
-    .patient-service-box h3 {
-        font-size: 19px;
-    }
-
-    .patient-service-box p {
-        font-size: 14px;
-    }
-}
-
-* {
-    box-sizing: border-box;
-}
-
-
-/* =========================================
-   STAFF SECTION
-========================================= */
-
-.staff-section {
-    width: 100%;
-    max-width: 90%;
-
-    margin: 60px auto;
-    padding: 30px;
-
-    background: rgba(255, 255, 255, 0.30);
-
-    backdrop-filter: blur(18px);
-    -webkit-backdrop-filter: blur(18px);
-
-    border: 4px solid rgba(0, 0, 0, 0.65);
-
-    border-radius: 28px;
-
-    box-shadow:
-        0 15px 45px rgba(0, 0, 0, 0.20),
-        inset 0 0 25px rgba(255, 255, 255, 0.30);
-}
-
-
-/* =========================================
-   HEADER
-========================================= */
-
-.staff-header {
-    text-align: center;
-
-    margin-bottom: 30px;
-}
-
-
-.staff-header h2 {
-    margin: 0 0 8px;
-
-    color: #000000;
-
-    font-size: 38px;
-    font-weight: 800;
-
-    letter-spacing: 1px;
-}
-
-
-.staff-header p {
-    margin: 0;
-
-    color: #000000;
-
-    font-size: 16px;
-}
-
-
-/* =========================================
-   STAFF LIST
-========================================= */
-
-.staff-list {
-    width: 100%;
-
-    display: flex;
-    flex-direction: column;
-
-    gap: 15px;
-}
-
-
-/* =========================================
-   STAFF ROW
-========================================= */
-
-.staff-row {
-    width: 100%;
-
-    display: grid;
-
-    grid-template-columns: 1fr 1fr 2fr;
-
-    align-items: center;
-
-    gap: 20px;
-
-    padding: 20px 25px;
-
-    background: rgba(255, 255, 255, 0.30);
-
-    backdrop-filter: blur(12px);
-    -webkit-backdrop-filter: blur(12px);
-
-    border: 2px solid rgba(0, 0, 0, 0.35);
-
-    border-left: 7px solid #000000;
-
-    border-radius: 15px;
-
-    transition: all 0.3s ease;
-}
-
-
-/* =========================================
-   STAFF HOVER
-========================================= */
-
-.staff-row:hover {
-    transform: translateX(8px);
-
-    background: rgba(255, 255, 255, 0.55);
-
-    border-left-width: 10px;
-
-    box-shadow:
-        0 8px 25px rgba(0, 0, 0, 0.15);
-}
-
-
-/* =========================================
-   NAME
-========================================= */
-
-.staff-name h3 {
-    margin: 0;
-
-    color: #000000;
-
-    font-size: 21px;
-
-    font-weight: 800;
-}
-
-
-/* =========================================
-   POSITION
-========================================= */
-
-.staff-position h4 {
-    margin: 0;
-
-    color: #000000;
-
-    font-size: 17px;
-
-    font-weight: 700;
-}
-
-
-/* =========================================
-   ABOUT
-========================================= */
-
-.staff-about p {
-    margin: 0;
-
-    color: #000000;
-
-    font-size: 15px;
-
-    line-height: 1.6;
-}
-
-
-/* =========================================
-   TABLET
-========================================= */
-
-@media (max-width: 900px) {
 
     .staff-section {
-        width: 100%;
-        padding: 20px;
+        padding: 55px 5%;
     }
-
-    .staff-row {
-        grid-template-columns: 1fr 1fr;
-
-        gap: 15px;
-    }
-
-    .staff-about {
-        grid-column: 1 / -1;
-    }
-
-}
-
-
-/* =========================================
-   MOBILE
-========================================= */
-
-@media (max-width: 600px) {
-
-    .staff-section {
-        width: 100%;
-
-        padding: 15px;
-
-        margin: 40px auto;
-
-        border-radius: 20px;
-    }
-
 
     .staff-header h2 {
-        font-size: 30px;
+        font-size: 32px;
     }
 
-
     .staff-row {
-        display: flex;
+        grid-template-columns: 1fr;
 
-        flex-direction: column;
-
-        align-items: flex-start;
+        gap: 5px;
 
         padding: 20px;
     }
 
+    .footer-container {
+        grid-template-columns: 1fr 1fr;
 
-    .staff-name,
-    .staff-position,
-    .staff-about {
+        padding: 50px 7%;
+    }
+
+    .footer-bottom {
+        flex-direction: column;
+
+        text-align: center;
+    }
+}
+
+
+/* =====================================================
+   SMALL PHONES
+===================================================== */
+
+@media (max-width: 500px) {
+
+    .header {
+        flex-wrap: wrap;
+    }
+
+    .logo img {
+        width: 90px;
+    }
+
+    .search-bar {
+        width: calc(100% - 120px);
+
+        order: 3;
+    }
+
+    .menu-toggle {
+        order: 2;
+    }
+
+    .banner-text {
+        padding-left: 5%;
+        padding-right: 5%;
+    }
+
+    .banner-buttons {
+        flex-direction: column;
+
         width: 100%;
     }
 
-
-    .staff-name h3 {
-        font-size: 20px;
+    .btn {
+        width: 100%;
     }
 
-
-    .staff-position h4 {
-        font-size: 16px;
+    .hospital-form,
+    .doctor-form {
+        padding: 22px;
     }
 
+    .footer-container {
+        grid-template-columns: 1fr;
 
-    .staff-about p {
-        font-size: 14px;
+        padding: 45px 8%;
     }
 
+    .footer-bottom div {
+        flex-direction: column;
+
+        gap: 8px;
+    }
 }
-
-.banner-text .health {
-    color: #72B1BC;
-    font-family:Arial, Helvetica, sans-serif;
-}
-
-
-.main-footer {
-width: 100%;
-box-sizing: border-box;
-padding: 55px 6% 0;
-background: #101820;
-color: #ffffff;
-font-family: Arial, sans-serif;
-}
-
-.footer-container {
-width: 100%;
-max-width: 1400px;
-margin: auto;
-display: flex;
-gap: 40px;
-}
-
-.footer-column {
-flex: 1;
-min-width: 0;
-}
-
-.footer-column:first-child {
-flex: 1.4;
-}
-
-.footer-logo {
-margin: 0 0 20px;
-font-size: 27px;
-font-weight: 800;
-letter-spacing: 2px;
-}
-
-.footer-logo span {
-color: #d4af37;
-}
-
-.footer-column h3 {
-margin: 0 0 25px;
-padding-bottom: 12px;
-font-size: 17px;
-position: relative;
-}
-
-.footer-column h3::after {
-content: "";
-position: absolute;
-left: 0;
-bottom: 0;
-width: 35px;
-height: 3px;
-background: #d4af37;
-border-radius: 10px;
-}
-
-.footer-column p {
-color: #aeb7c2;
-font-size: 14px;
-line-height: 1.8;
-}
-
-.footer-column a {
-color: #b9c1ca;
-text-decoration: none;
-font-size: 14px;
-transition: 0.3s;
-}
-
-.footer-column a:hover {
-color: #d4af37;
-}
-
-.footer-column > a {
-display: block;
-margin-bottom: 13px;
-}
-
-.footer-link {
-color: #d4af37 !important;
-font-weight: 600;
-}
-
-.location {
-display: flex;
-gap: 12px;
-align-items: flex-start;
-margin-bottom: 15px;
-}
-
-.location span {
-font-size: 22px;
-}
-
-.location strong {
-display: block;
-margin-bottom: 7px;
-font-size: 14px;
-}
-
-.location p {
-margin: 0;
-font-family: 'Courier New', Courier, monospace;
-}
-
-.mwisho {
-    max-width: 100%;
-    height: 30px;
-    background-color: rgb(39, 39, 231);
-}
-
-.mwisho p {
-    color: white;
-    text-align: center;
-    font-family: Arial, Helvetica, sans-serif;
-    padding-top: 4px;
-}
-
-.footer-bottom {
-    /* background-color: #000000; */
-    border: 2px solid white;
-    border-radius: 10px;
-    padding: 5px;
-    text-align: center;
-    font-family: Arial, Helvetica, sans-serif;
-}
-
-.footer-bottom a {
-    font-family: 'Courier New', Courier, monospace;
-    color: rgb(29, 193, 214);
-    text-decoration: none;
-}
-
-
